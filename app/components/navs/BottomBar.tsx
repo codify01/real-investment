@@ -1,18 +1,13 @@
 'use client';
 import React from 'react';
-import { usePathname } from 'next/navigation'; // Next.js 13 App Router
+import { usePathname } from 'next/navigation';
 import {
 	IoHome,
-	IoInformationCircle,
-	IoLogOut,
 	IoNotificationsOutline,
 	IoSettingsSharp,
 	IoStatsChart,
 	IoWallet,
 } from 'react-icons/io5';
-import { GoHome } from 'react-icons/go';
-import { CiCircleInfo } from 'react-icons/ci';
-import { BiStats } from 'react-icons/bi';
 
 const Bottombar: React.FC = () => {
 	const pathname = usePathname();

@@ -1,5 +1,4 @@
 import React from 'react'
-import { IoWallet } from 'react-icons/io5'
 
 interface SummaryCardProps {
     icon:React.ReactNode,

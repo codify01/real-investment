@@ -1,6 +1,6 @@
 import InvestmentOverviewCard from "@/app/components/cards/InvestmentOverviewCard";
 import React from "react";
-import { IoTrendingUp, IoBarChart, IoCash } from "react-icons/io5";
+import { IoTrendingUp, IoCash } from "react-icons/io5";
 
 const Investment: React.FC = () => {
   return (

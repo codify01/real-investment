@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { IoHome, IoPersonCircle } from 'react-icons/io5'; // Example icons
 import { MdOutlineRealEstateAgent } from 'react-icons/md';
 
 const Navbar: React.FC = () => {

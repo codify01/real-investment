@@ -1,10 +1,10 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { IoHome, IoStatsChart, IoSettingsSharp, IoWallet, IoTrendingUp, IoNotificationsOutline, IoLogOut } from 'react-icons/io5';
+import { IoHome, IoStatsChart, IoSettingsSharp, IoWallet,IoNotificationsOutline, IoLogOut } from 'react-icons/io5';
 
 const Sidebar: React.FC = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const currentUserRole = 'investor' 
 
   // Navigation items for admin and investor
@@ -27,7 +27,7 @@ const Sidebar: React.FC = () => {
     ],
   };
 
-  const navItemsToRender = currentUserRole === 'admin' ? navItems.admin : navItems.investor;
+  const navItemsToRender = currentUserRole === 'investor' ? navItems.admin : navItems.investor;
 
   return (
     <div className="drawer lg:drawer-open h-screen fixed left-0 hidden lg:block bg-pry w-[16.6667%]">

@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import Link from "next/link";
-import { FormikValues, useFormik } from "formik";
+import { useFormik } from "formik";
 
 const RegisterPage: React.FC = () => {
 

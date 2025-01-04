@@ -3,10 +3,6 @@ import { IoWallet, IoBarChart, IoTrendingUp, IoCash } from 'react-icons/io5';
 import InvestmentCard from '../../components/cards/InvestmentCard';
 import SummaryCard from '@/app/components/cards/SummaryCard';
 
-interface InvestmentSummary {
-
-}
-
 const InvestorDashboard: React.FC = () => {
 
 
