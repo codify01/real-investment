@@ -11,7 +11,7 @@ const Performance: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen text-pry p-6">
+    <div className="min-h-screen text-pry py-6">
       {/* Page Header */}
       <div className="flex items-center mb-8">
         <h1 className="text-3xl font-semibold ">Investment Performance</h1>

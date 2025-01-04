@@ -6,7 +6,7 @@ import { MdOutlineRealEstateAgent } from 'react-icons/md';
 const Navbar: React.FC = () => {
 	return (
 		<>
-			<header className="fixed top-0 w-full bg-pry  text-sec shadow-lg z-20 ps-6">
+			<header className="fixed flex items-center top-0 w-full text-sec z-20 md:ps-6 h-[8vh] bg-pry">
 				<div className="navbar">
 					<div className="flex-1 gap-2">
 					<MdOutlineRealEstateAgent size={30}/>
@@ -32,12 +32,18 @@ const Navbar: React.FC = () => {
 								className="menu menu-sm dropdown-content bg-pry text-sec rounded-box z-[1] mt-3 w-52 p-2 shadow"
 							>
 								<li>
-									<Link href={'/profile'} >
+									<Link href={'/user/profile'} >
 										Profile
 									</Link>
 								</li>
 								<li>
-									<Link href={'/settings'}>Settings</Link>
+									<Link href={'/user/notifications'} >
+										Notifications
+									</Link>
+								
+								</li>
+								<li>
+									<Link href={'/user/settings'}>Settings</Link>
 								</li>
 								<li>
 									<a>Logout</a>
@@ -47,7 +53,7 @@ const Navbar: React.FC = () => {
 					</div>
 				</div>
 			</header>
-			<div className="h-[6vh]"></div>
+			<div className="h-[7vh] bg-transparent"></div>
 		</>
 	);
 };

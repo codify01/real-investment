@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import React, { useState } from "react";
 import { IoSearch, IoTrendingUp } from "react-icons/io5";
 
@@ -47,7 +48,7 @@ const AvailableInvestments: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen text-pry p-6">
+    <div className="min-h-screen text-pry py-6">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-pry">Available Investments</h1>
@@ -62,7 +63,7 @@ const AvailableInvestments: React.FC = () => {
           placeholder="Search investments..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full bg-transparent text-sec placeholder-sec focus:outline-none"
+          className="w-full bg-transparent placeholder-pry focus:outline-none"
         />
       </div>
 
@@ -96,9 +97,9 @@ const AvailableInvestments: React.FC = () => {
 
                 {/* View Details Button */}
                 <div className="mt-4 text-center">
-                  <button className="bg-pry text-sec py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition-all w-full">
+                  <Link href={'investments/1'} className="bg-pry text-sec py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition-all w-full">
                     View Details
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

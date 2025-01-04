@@ -1,7 +1,26 @@
+"use client"
 import React from "react";
 import Link from "next/link";
+import { FormikValues, useFormik } from "formik";
 
 const RegisterPage: React.FC = () => {
+
+  const formik = useFormik(
+    {
+      initialValues:{
+        name: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+      },
+
+      onSubmit: (values)=>{
+        console.table(values)
+      }
+    }
+  )
+  
+  
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="card w-full max-w-md shadow-md bg-sec p-6 rounded-md">
@@ -10,14 +29,17 @@ const RegisterPage: React.FC = () => {
         <p className="text-center text-pry mb-6">Sign up to get started</p>
 
         {/* Registration Form */}
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={formik.handleSubmit}>
           {/* Full Name */}
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-pry">
               Full Name
             </label>
             <input
+              onChange={formik.handleChange}
+              value={formik.values.name}
               id="name"
+              name="name"
               type="text"
               placeholder="John Doe"
               className="w-full mt-1 px-4 py-2 border border-pry text-pry bg-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-pry focus:border-pry"
@@ -31,8 +53,11 @@ const RegisterPage: React.FC = () => {
               Email Address
             </label>
             <input
+              onChange={formik.handleChange}
+              value={formik.values.email}
               id="email"
               type="email"
+              name="email"
               placeholder="you@example.com"
               className="w-full mt-1 px-4 py-2 border border-pry text-pry bg-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-pry focus:border-pry"
               required
@@ -45,8 +70,11 @@ const RegisterPage: React.FC = () => {
               Password
             </label>
             <input
+              onChange={formik.handleChange}
+              value={formik.values.password}
               id="password"
               type="password"
+              name="password"
               placeholder="Enter a secure password"
               className="w-full mt-1 px-4 py-2 border border-pry text-pry bg-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-pry focus:border-pry"
               required
@@ -55,11 +83,13 @@ const RegisterPage: React.FC = () => {
 
           {/* Confirm Password */}
           <div>
-            <label htmlFor="confirm-password" className="block text-sm font-medium text-pry">
+            <label htmlFor="confirmPassword" className="block text-sm font-medium text-pry">
               Confirm Password
             </label>
             <input
-              id="confirm-password"
+              onChange={formik.handleChange}
+              value={formik.values.confirmPassword}
+              id="confirmPassword"
               type="password"
               placeholder="Confirm your password"
               className="w-full mt-1 px-4 py-2 border border-pry text-pry bg-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-pry focus:border-pry"

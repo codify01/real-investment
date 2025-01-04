@@ -3,7 +3,7 @@ import { IoNotifications, IoLockClosed, IoPerson, IoLogOut } from "react-icons/i
 
 const Settings: React.FC = () => {
   return (
-    <div className="min-h-screen text-pry p-6">
+    <div className="min-h-screen text-pry py-6">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-2xl font-bold">Settings</h1>

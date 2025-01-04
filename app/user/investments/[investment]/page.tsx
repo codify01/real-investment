@@ -32,7 +32,7 @@ const InvestmentDetails: React.FC = () => {
 
       {/* Investment Info */}
       <div className="flex flex-col space-y-8">
-        <div className="bg-sec p-6 rounded-lg shadow-lg">
+        <div className="bg-white shadow p-6 rounded-lg">
           <h1 className="text-3xl font-semibold text-pry">{investment.name}</h1>
           <p className="text-sm text-pry/70">{investment.description}</p>
 
@@ -76,7 +76,7 @@ const InvestmentDetails: React.FC = () => {
         </div>
 
         {/* Progress Bar for Funding Status */}
-        <div className="bg-sec p-6 rounded-lg shadow-lg mt-8">
+        <div className="bg-white shadow p-6 rounded-lg mt-8">
           <h3 className="text-xl font-semibold text-pry">Funding Progress</h3>
           <div className="mt-4 h-2 bg-pry/50 rounded-full">
             <div
@@ -91,7 +91,7 @@ const InvestmentDetails: React.FC = () => {
         </div>
 
         {/* Investment Benefits */}
-        <div className="bg-sec p-6 rounded-lg shadow-lg mt-8">
+        <div className="bg-white shadow p-6 rounded-lg  mt-8">
           <h3 className="text-xl font-semibold text-pry">Why Invest?</h3>
           <ul className="list-disc pl-5 mt-4 space-y-2">
             <li>High potential returns in the rapidly growing tech sector</li>

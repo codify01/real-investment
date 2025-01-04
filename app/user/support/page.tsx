@@ -18,7 +18,7 @@ const faqs = [
 
 const SupportPage: React.FC = () => {
   return (
-    <div className="min-h-screen text-pry p-6">
+    <div className="min-h-screen text-pry py-6">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-semibold">Support</h1>

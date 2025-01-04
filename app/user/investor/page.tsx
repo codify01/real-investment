@@ -1,10 +1,17 @@
 import React from 'react';
 import { IoWallet, IoBarChart, IoTrendingUp, IoCash } from 'react-icons/io5';
-import InvestmentCard from '../components/cards/InvestmentCard';
+import InvestmentCard from '../../components/cards/InvestmentCard';
+import SummaryCard from '@/app/components/cards/SummaryCard';
+
+interface InvestmentSummary {
+
+}
 
 const InvestorDashboard: React.FC = () => {
+
+
 	return (
-		<div className="p-6 bg-sec min-h-screen overflow-y-auto">
+		<div className="py-6 min-h-screen overflow-y-auto">
 			{/* Dashboard Header */}
 			<div className="mb-8">
 				<h1 className="text-2xl font-bold text-pry">Welcome, Investor!</h1>
@@ -14,15 +21,7 @@ const InvestorDashboard: React.FC = () => {
 			{/* Investment Summary Cards */}
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
 				{/* Total Investment */}
-				<div className="card shadow-md bg-pry text-sec">
-					<div className="card-body flex items-center">
-						<IoWallet className="text-4xl" />
-						<div className="ml-4 text-center">
-							<p className="font-bold">Total Investment</p>
-							<h2 className="text-xl">$50,000</h2>
-						</div>
-					</div>
-				</div>
+				<SummaryCard icon={<IoWallet className="text-4xl" />} title='Total Investment' figure='$50,000'/>
 
 				{/* Earnings */}
 				<div className="card shadow-md bg-pry text-sec">
@@ -60,10 +59,12 @@ const InvestorDashboard: React.FC = () => {
 
 			{/* Recent Investments as Cards */}
 			<div className="mb-8">
-				<div className='flex justify-between items-center'>
-        <h2 className="text-xl font-bold text-pry mb-4">Recent Investments</h2>
-        <h6 className='text-pry/90'>view all</h6>
-        </div>
+				<div className="flex justify-between items-center">
+					<h2 className="text-xl font-bold text-pry mb-4">
+						Recent Investments
+					</h2>
+					<h6 className="text-pry/90">view all</h6>
+				</div>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 					{/* Investment Card 1 */}
 					<InvestmentCard />

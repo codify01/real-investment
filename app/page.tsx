@@ -1,8 +1,19 @@
 import React from 'react'
+import HeroSection from './components/homepageSections/HeroSection'
+import FeaturesSection from './components/homepageSections/FeatureSection'
+import TestimonialsSection from './components/homepageSections/Testimonial'
+import NavBar from './components/homepageSections/NavBar'
+import { log } from 'console'
 
 const page = () => {
+
   return (
-    <div className='bg-black'>page</div>
+    <div>
+      <NavBar/>
+      <HeroSection/>
+      <FeaturesSection/>
+      <TestimonialsSection/>
+    </div>
   )
 }
 

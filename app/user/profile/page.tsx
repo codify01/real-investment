@@ -3,7 +3,7 @@ import { IoPersonCircle, IoLockClosed, IoPencil, IoMail, IoCall } from "react-ic
 
 const ProfilePage: React.FC = () => {
   return (
-    <div className="min-h-screen p-6">
+    <div className="min-h-screen py-6">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-pry">Profile</h1>
@@ -31,6 +31,7 @@ const ProfilePage: React.FC = () => {
             <div className="flex items-center border border-pry/50 rounded-lg bg-transparent p-3">
               <IoPencil className="text-pry mr-2" />
               <input
+                name="fullname"
                 type="text"
                 className="bg-transparent w-full text-pry outline-none"
                 placeholder="Enter your full name"

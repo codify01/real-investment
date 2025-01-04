@@ -3,7 +3,7 @@ import { IoPeople, IoStatsChart, IoSettings, IoWallet } from "react-icons/io5";
 
 const AdminDashboard: React.FC = () => {
   return (
-    <div className="min-h-screen p-6">
+    <div className="min-h-screen py-6">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-pry">Admin Dashboard</h1>
