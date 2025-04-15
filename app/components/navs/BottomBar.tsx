@@ -8,6 +8,7 @@ import {
 	IoStatsChart,
 	IoWallet,
 } from 'react-icons/io5';
+import Link from 'next/link';
 
 const Bottombar: React.FC = () => {
 	const pathname = usePathname();
@@ -66,19 +67,17 @@ const Bottombar: React.FC = () => {
 			>
 				<div className="flex justify-around items-center py-3">
 					{navItemsToRender.map((item) => (
-						<button
+						<Link href={item.href}
 							key={item.name}
-							onClick={() => window.location.assign(item.href)}
 							className={`flex flex-col items-center text-sm ${
 								pathname === item.href
 									? 'text-white bg-pry/90 active'
 									: 'text-gray-400'
 							} p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pry`}
-							// aria-label={item.aria}
 						>
 							<span className="text-2xl">{item.icon}</span>
 							<span className="text-[11px] font-medium">{item.name}</span>
-						</button>
+						</Link>
 					))}
 				</div>
 			</nav>
