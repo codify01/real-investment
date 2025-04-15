@@ -98,9 +98,9 @@ const RegisterPage: React.FC = () => {
           </div>
 
           {/* Submit Button */}
-          <button type="submit" className="btn btn-primary w-full bg-pry text-sec hover:bg-pry/90">
+          <Link href={'/login'} type="submit" className="btn btn-primary w-full bg-pry text-sec hover:bg-pry/90">
             Register
-          </button>
+          </Link>
         </form>
 
         {/* Divider */}
